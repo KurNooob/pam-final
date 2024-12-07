@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ScrollView filling the entire screen -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <!-- Main Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Card Layout (Header) -->
+            <RelativeLayout
+                android:id="@+id/cardContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_bg"
+                android:padding="16dp"
+                android:elevation="4dp">
+
+                <!-- Image with overlay -->
+
+                <!-- Separator Line -->
+
+                <ImageView
+                    android:id="@+id/ivMainImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:background="@drawable/rounded_bg"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover_img" />
+
+                <View
+                    android:id="@+id/separatorLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ivMainImage"
+                    android:layout_marginTop="8dp"
+                    android:background="#D3D3D3" />
+
+                <!-- Bottom Information Container -->
+                <LinearLayout
+                    android:id="@+id/bottomInfoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/separatorLine"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <!-- Rating -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Rating"
+                            android:fontFamily="@font/poppins"
+                            android:textColor="@color/grey"
+                            android:textSize="14sp" />
+
+                        <!-- Rating Label with Image -->
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <!-- Rating Image -->
+                            <ImageView
+                                android:id="@+id/ivRating"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/rating"
+                                android:layout_marginStart="4dp"
+                                android:contentDescription="Rating Icon" />
+
+                            <!-- Rating Number -->
+                            <TextView
+                                android:id="@+id/tvRatingLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  4.6"
+                                android:textSize="13sp"
+                                android:gravity="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Separator Line Between Rating and Ticket Info -->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#D3D3D3"/>
+
+                    <!-- Ticket Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvTicket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Tiket Masuk"
+                            android:fontFamily="@font/poppins"
+                            android:textColor="@color/grey"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvTicketLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10k"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <!-- Separator Line Between Ticket Info and Parking Info -->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#D3D3D3"/>
+
+                    <!-- Parking Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvParking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Parkir"
+                            android:fontFamily="@font/poppins"
+                            android:textColor="@color/grey"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvParkingLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Motor - Bus"
+                            android:textSize="13sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <!-- Separator Line Between Parking Info and Parking Fee Info -->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#D3D3D3"/>
+
+                    <!-- Parking Fee Info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvParkingFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Harga Parkir"
+                            android:fontFamily="@font/poppins"
+                            android:textColor="@color/grey"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/tvParkingFeeLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2k-50k"
+                            android:textSize="13sp"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- ScrollView Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Location Details -->
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"                    android:text="Location Title"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                            android:fontFamily="@font/poppins"
+                    android:text="Location Name" />
+
+
+                <TextView
+                    android:id="@+id/overviewTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                            android:fontFamily="@font/poppins"
+                    android:text="Location Overview"
+                    android:paddingBottom="16dp" />
+
+                <!-- User Review Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penilaian"                            android:fontFamily="@font/poppins"
+                    android:textStyle="bold" />
+
+                <!-- CardView for User Review Input -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- User Image and Star Rating -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- User Image Placeholder -->
+                            <ImageView
+                                android:id="@+id/userImagePlaceholder"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/accpic"
+                                android:contentDescription="User Image"
+                                android:scaleType="centerCrop" />
+
+                            <!-- Star Rating -->
+                            <RatingBar
+                                android:id="@+id/userRatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:numStars="5"
+                                android:stepSize="1"
+                                android:theme="@style/SmallRatingBarStyle"/>
+                        </LinearLayout>
+
+                        <!-- Separator Line -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="16dp"
+                            android:background="#D3D3D3" />
+
+                        <!-- Review Input and Submit Button -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- Review Input -->
+                            <EditText
+                                android:id="@+id/userReviewEditText"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:hint="Write your review here..."
+                                android:background="@drawable/rounded_bg"
+                                android:padding="8dp"
+                                android:textColor="#000"
+                                android:textSize="14sp" />
+
+                            <!-- Submit Button (right aligned) -->
+                            <ImageView
+                                android:id="@+id/submitReviewButton"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/pencil"
+                                android:contentDescription="Submit Review"
+                                android:padding="8dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- All Reviews Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All Reviews"                            android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:paddingTop="16dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/reviewsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Back Button (Top-Left) -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_back2"
+        android:contentDescription="Back Button"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Star Button (Top-Right) -->
+    <ImageView
+        android:id="@+id/starButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_star_inact"
+        android:contentDescription="Star Button"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/staticButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Tampilkan Rute"
+        android:textSize="16sp"
+        android:backgroundTint="@color/teal"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

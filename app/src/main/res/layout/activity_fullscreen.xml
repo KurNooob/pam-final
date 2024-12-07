@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ViewPager2 for swiping images -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Left Arrow -->
+    <ImageView
+        android:id="@+id/ivLeftArrow"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:padding="12dp"
+        android:src="@drawable/ic_arrow_left"
+        android:visibility="gone" />
+
+    <!-- Right Arrow -->
+    <ImageView
+        android:id="@+id/ivRightArrow"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:padding="12dp"
+        android:src="@drawable/ic_arrow_right"
+        android:visibility="gone" />
+
+    <!-- Text Overlay: Title and Location -->
+    <LinearLayout
+        android:id="@+id/llTextOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:layout_alignParentStart="true">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pantai Parangtritis"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="4" />
+
+        <!-- Location Row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <!-- Location Icon -->
+            <ImageView
+                android:id="@+id/ivLocationIcon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ic_location" />
+
+            <!-- Location Text -->
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kretek, Bantul"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
